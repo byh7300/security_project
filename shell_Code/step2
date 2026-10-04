@@ -1,0 +1,12 @@
+grep -A 3 "EXECVE" ~/lab/logs/audit.log \
+|grep -E '"/tmp|/dev/shm'
+
+grep "EXECVE" ~/lab/logs/audit.log \
+|grep -E '"curl"|"wget"' \
+|head -20
+
+grep "SYSCALL" ~/lab/logs/audit.log \
+|grep "uid=0" | grep "execve" |wc -la
+grep "auid=1001" ~/lab/logs/audit.log \
+|grep "EXECVE" \
+|awk -F'a0=' '{print $2}' | tr -d '"' | sort -u

@@ -1,0 +1,8 @@
+grep -h "Feb 14 02:" \
+~/lab/logs/auth.log \
+~/lab/logs/ssyslog | \
+sort -k3,3 | \
+
+grep -E "Accepted|Failed|sudo|EXECVE|cron|useradd|curl|wget"
+
+awk '/SYSCALL/{ts=$3; sub(/msg=audit\(/,"",ts);sub(/".*/,"",ts);)}

@@ -1,0 +1,11 @@
+grep -cE "Accepted|Failed" ~/lab/logs/auth.log
+
+grep "Failed" ~/lab/logs/auth.log \
+| grep -oP 'from \K|\d.]+' \
+|sort |uniq -c |sort -rn | head -10
+
+grep "Accepted" ~/lab/logs/auth.log \
+| awk '{print $1,$2,$3, $9,"from",$11}'
+
+python3 ~/lab/scripts/ssh_analyzer.py \
+~/lab/logs/auth.log

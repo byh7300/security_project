@@ -1,0 +1,15 @@
+#파일 확인
+ls -la ~/lab/logs/
+
+# 도구 확인
+
+which grep awk sed sort python3 jq ausearch
+
+#auth.log 첫 10줄 확인
+head -10 ~/lab/logs/auth.log
+
+#전체 줄 수 확인
+wc -l ~/lab/logs/*.log
+
+#날짜 범위 확인
+head -l ~/lab/logs/auth.log; tail -l ~/lab/logs/auth.log
