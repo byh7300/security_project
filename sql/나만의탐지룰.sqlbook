@@ -1,0 +1,9 @@
+-- SQLBook: Code
+process.name:"crontab" AND
+user.name:"root" AND
+process.args:("-e" OR "-r")
+OR
+file.path:"var/spool/cron/root" AND
+event.action:"file_modified" AND
+file.content :("curl" OR "wget") AND
+file.content : ("http" OR "https")

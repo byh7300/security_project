@@ -1,0 +1,6 @@
+-- SQLBook: Code
+source.ip : "198.51.100.23" And event.outcome :"success"
+
+user.name : "admin" And event.action:"ssh_login_success"
+host.name : "db01" And user.name:"admin"
+process.name:("scp","rsync","curl") And host.name:"db01"
