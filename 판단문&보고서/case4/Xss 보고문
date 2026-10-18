@@ -1,0 +1,5 @@
+출발지 IP 45.77.22.90이 2024-04-14 10:41-10:42 사이
+/serach(GET)와 /comment(POST)에 XSS payload를 반복 전송.
+document.cookie를 포함한 Stored XSS 시도(/comment)가 있어
+관리자가 해당 댓글을 조회할 경우 세션 탈취 가능성 있음.
+즉시 /comment 저장 콘텐츠 확인 및 비활성화 요청."
