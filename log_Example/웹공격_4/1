@@ -1,0 +1,19 @@
+14.56.198.3 - -[15/Mar/2026:10:15:33] "GET/products/phone.html HTTP/1.1" 200 4821 "https://example/com/" "Mozilla/5.0 Chrome/120 Safari/537.36"
+
+판정 : 정상 - 정상 브라우저 UA,정적 HTML 페이지, 한국 IP, Referer 자연스러움, 응답크기 정상
+
+185.220.101.47 - - [15/Mar/2026:03:12:04] "GET /wp-login.php HTTP/1.1" 404 231 "-" Mozilla/5.0 (compatible)"
+
+판정: 위험(즉각 대응) - sqlmap UA,SQLI 페이로드(UNION SELECT+version()),200 성공+ 8KB 응답(정보 추출 추정), 하이픈 Referer
+
+91.108.56.22 - - ]-[15/Mar/2026:03:13 01] GET /api/iser/id=1%27+UNION+SELECT+1.2.version()--+HTTP/1.1" 200 8442 "-" sqlmap/1.7.8#stable"
+
+판정: 위험(즉각 대응) -- sqlmap UA, SQLi 페이로드(UNION SELECT+version()),200 성공 + 8KB 응답(정보 추출 추정),하이픈 Referer
+
+10.0.0.55 - admin [15/Mar/2026:14:22:10] "GET /uploads/a1b2v3d4.php?cmd=whoami HTTP/1.1" 200 18 "-" curl/7.81.0"
+ 
+판정 : 위험(사후 조사 취우선) -- uploads 경로에 .php 실행, cmd=whoami (명령실행),curl UA,내부 IP (내부자 또는 이미 침투된 서버),200성공
+
+198.51.100.9 - - [15/MAR/2026:11:05:17] "POST /search HTTP/1.1" 200 342 "https://example.com/search" "python-requests/2.28.1"
+
+판정 : 의심(추가 확인 필요) -- python-requests UA(자동화 도구), 반복 여부 확인, POST body 내용 확인 필요(APP LOG 확보)
