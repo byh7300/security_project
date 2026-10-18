@@ -1,0 +1,17 @@
+13:22:01 GET / 200 UA: sqlmap/1.7
+
+13:22:02 GET /.env 404
+
+13:22:03 GET /wp-admin 404
+
+13:22:04 GET /phpmyadmin 404
+
+13:22:05 GET /admin/config.php 404
+
+---1분 동안 약 200개 URL
+
+13:24:15 PUT /uploads/images/x.php 200
+
+13:24:20 POST /uploads/images/x.php 200 body:cmd=id
+
+13:24:25 POST /uploads/images/x.php 2-- body:cmd=ls

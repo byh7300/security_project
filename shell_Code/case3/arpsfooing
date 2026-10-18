@@ -1,0 +1,3 @@
+#ZEEK로 ARP 변화 감지
+
+cat arp.log | awk '$6!=$7 {print}'

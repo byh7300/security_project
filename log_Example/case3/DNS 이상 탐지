@@ -1,0 +1,16 @@
+11:03:01 A q7mn2jox9va.xyz NXDOMAIN
+
+11:03:02 A p3kn8tqv2mx.xyz NXDOMAIN
+
+11:03:03 A w9vn5jqp4kx.xyz NXDOMAIN
+
+... 1분에 약 60개, 계속
+
+--------다른 패턴 -------
+
+11:05:10 TXT aW1wb3J0YW5QRGFDYQ==.c2.attacker.com NOERROR
+
+11:05:15 TXT c2vuc210aXZ1Q3JlZQ== .c2.attacker.com NOERROR
+
+11:05:20 TXT ZXhmaWx0cmF0aWuRGF0YQ.c2.attacker.com NOERROR
+

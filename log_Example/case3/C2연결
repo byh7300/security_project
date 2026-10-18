@@ -1,0 +1,10 @@
+09:18 DNS log:
+
+9x3kp.ransom-c2.top A;
+-> 185.x.x.99 NOERROR
+
+09:19 Flow:
+
+10.0.1.45->185.x.x.99:443
+
+bytes_in=2.1MB(페이로드 다운)
