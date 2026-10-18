@@ -1,0 +1,10 @@
+# HTTP 객체 전체 추출
+
+tshark -r capture.pcap \
+    --export-objects http,./objects
+
+# DNS 질의 목록 추출
+
+tshark -r capture.pcap -Y dns \
+    -T fileds -e dns.qry.name \
+    | sort -u

@@ -1,0 +1,10 @@
+cat http.log | zeek-cut \
+    orig_h x_forwarded_for uri\
+    |awk '
+    S2 != "-" {print $2, $3}
+    S2 == "-" {print $1, $3}'
+
+#프록시 로그에서 실제 사용자 IP
+grep "CONNECT" proxy.log \
+    |awk '{print $8, $7}'
+    
