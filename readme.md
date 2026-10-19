@@ -4,5 +4,14 @@
 
 ## case 3 네트워크 패킷 분석
 
+
+
 ## case 3 웹 애플리케이션 분석
+
+    ### LFI
+    ### sql injection
+    ### XSS
+    ### webshell 탐지
+        #### waf
+        
 
