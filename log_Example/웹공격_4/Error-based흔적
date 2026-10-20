@@ -1,0 +1,8 @@
+
+Error-based 흔적
+
+GET /item?id=1' AND extractvalue(1.concat(0x7e.(SELECT version())))-
+상태코드: 500
+respose_time: 정상
+응답 본문: MYSQL syntax Error
+

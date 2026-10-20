@@ -1,0 +1,5 @@
+Recon : access.log 404 패턴
+Upload: POST 200 + multipart + 실행형 filename
+Execute: GET /uploads/shell.php?cmd=
+Esclate: EDR process create (sh/bash)
+Persist: cron/service 변경, egress 연결

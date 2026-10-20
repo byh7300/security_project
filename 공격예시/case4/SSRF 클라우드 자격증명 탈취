@@ -1,0 +1,6 @@
+
+1. POST /api/preview에 url=http://169.254.169.254/latest/meta-data/ 전송
+2. 서버가 메타데이터 서비스에 요청
+3. 응답에 IAM role 이름, 자격증명 포함
+4. 공격자가 응답 데이터로 AWS API 호출 가능
+

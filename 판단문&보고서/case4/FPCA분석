@@ -1,0 +1,4 @@
+F: 172.104.81.55, upload -> /uploads/shell.php?cmd=
+P: File Upload + Wehshell 체인 완성
+C: 서버 장악 -> Critical 우선순위
+A: 즉시 격리, IR 에스컬레이션, 포렌식
