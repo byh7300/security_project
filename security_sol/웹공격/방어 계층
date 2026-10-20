@@ -1,0 +1,20 @@
+1 네트워크
+DDOS  방어, IP 블랙리스트, 지역 필터링
+
+2 CDN/엣지
+Rate Limiting, Bot 탐지, TLS termination
+
+3 WAF
+패턴 차단, OWASP CRS, 커스텀 룰
+
+4 애플리케이션
+입력 검증, Prepared Statement, Output Encoding
+
+5 인증/세션
+MFA, 세션 고정 방지, HttpOnly 쿠키
+
+6 데이터
+DB 최소 권한, 민감정보 암호화, 감사 로그
+
+7 모니터링
+SIEM, WAF 알람, EDR, SOAR 대응

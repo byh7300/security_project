@@ -1,0 +1,4 @@
+endpoint='/login' AND status=401
+AND count(*) > 20 WITHIN 10min
+FOLLOWED BY status IN (200,302) WITHIN 5min
+-> CRITICAL: Auth Suceess After BF

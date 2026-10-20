@@ -1,0 +1,4 @@
+query_param CONTAINS '127.0.0.1' OR '169.254.'
+FOLLOWED BY outbound_dns OR outbound_http
+TO internal_range WITHIN 30s
+-> HIGH: SSRF with outbound

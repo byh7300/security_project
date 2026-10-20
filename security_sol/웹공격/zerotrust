@@ -1,0 +1,14 @@
+Never Trust, Always Verify
+    내부 IP도 인증 필요
+
+Least Priviledge 
+    필요한 최소 권한만 부요
+Assume Breach
+    이미 뚫렸다고 가정하고 탐지
+
+SOC에서의 의미
+내부 IP의 관리자 접근도 검증 대상
+VPN 내부 트래픽도 모니터링
+서비스 계정의 웹 요청도 기록
+인증 성공 이후 행동도 감시 대상
+

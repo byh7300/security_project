@@ -1,0 +1,4 @@
+POST /upload AND filename~'\.php$' AND status=200
+FOLLOWED BY
+GET /uploads/%.php?cmd=WITHIN 10min
+-> CRITICAL: WebShell Chain

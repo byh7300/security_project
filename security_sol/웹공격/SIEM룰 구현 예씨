@@ -1,0 +1,6 @@
+SQLi 상관 룰
+
+src_ip = X AND
+decoded_uri LIKE '%UNION%SELECXT%' AND
+count(*) > 10 WITHIN  5min AND status IN (200,500)
+-> ALERT: SQLi Medium

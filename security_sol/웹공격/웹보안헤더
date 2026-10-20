@@ -1,0 +1,14 @@
+필수 보안 헤더
+
+Content-Security-Policy     xss 방어
+Strict-Transport-Security   HTTPS 강제
+X-Frame-Options             ClickJacking 방어
+X-Content-Type-Options      MIME 스니핑 방지
+Referrer-Policy             wjdqh shcnf wpgks
+
+SOC 확인 포인트
+
+CSP 없음 -> XSS 성공 시 data 유출 용이
+HSTS 없음- > 중간자 공격 가능
+서버 버전 헤더 노출 -> 공격 용이
+헤더 부재 시 개발팀 권고 포인터
