@@ -1,0 +1,7 @@
+5분 Triage 체크리스트
+
+1. Critical 알람 WebShell 내용 즉시 확인
+2. shell.php 실제 실행 여부 (EDR 확인)
+3. High 3건은 Critical 처리 중 병행 모니터링
+4. 서버 격리 여부 팀 리더에게 즉시 보고
+5. Brute Force와 Upload IP가 WebShell과 관련? 확인

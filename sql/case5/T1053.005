@@ -1,0 +1,19 @@
+
+index=winevent EventCode=4698
+#조건 1: 업무외 시간
+| eval hour=strftime(_time,"%H")
+| where hour<6 OR hour>=22
+#조건2 : 의심 실행경로
+|  search TaskContent IN
+("*\\TEMP\\*",
+"*\\AppData\\*",
+"*\\Users\\Public\\*")
+#조건3: 알려진 정상 작업 제외 (오탐)
+| NOT TaskName IN
+("GoogleUpdateTask*",
+"Adobe*Update*",
+"Microsoft*Update*")
+#출력
+| table _time, ComputerName,
+SubjectUserName, TaskName, TaskContent
+| sort -_time

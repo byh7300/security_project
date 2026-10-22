@@ -1,0 +1,13 @@
+로그: A
+Tactic crdential aceess-> initial access
+technique: T1110.001 password guessing -> t1078 valid accounts
+핵심근거: 동일 IP 47회 실패 후 다른 계정 으로 성공-> 브루트포스 패턴
+Confidence: High
+추가확인사항 : admin 계정 이후 행위, 해당 IP 다른 시스템 시도 여부
+
+로그 :B
+Tactic Execution(defense Evasion)
+Technique: T1059.001 PowerShell -> T1027 Obfusctation
+핵심 근거: WINWORD.ExE 자식 powershell.exe+-Hidden-Exec Bypass -End(base64)= 매크로 악용 나녹화
+Confidence:High
+추가확인사항: Base64 

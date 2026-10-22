@@ -1,0 +1,17 @@
+-- Day 1 11/18 --
+09:14 메일 GW: xlsm 첨부 수신 (VT 3/94)
+09:32 DNS: update-svc.net 첫 쿼리 (생성 5일)
+09:33 FW: ALLOW 10.0.0.55->93.11.2.4:443
+-- Day 2 11/19 --
+03:22 WinEvent 4625: admin 실패 x 8 (DC)
+03:28 WinEvent 4624: admin 성공 (LogonType 3)
+03:31 Sysmon 1: net group "Domain Admins"
+03:35 Sysmon 10: lsass.exe 접근 (unknow_svc)
+03:44 WinEvent 4698: WindowsDefUpdate 등록
+-- Day 3 11/20 --
+02:01 File: \\filesvr\Engineering\ 2,847개 복사
+02:33 FW: 10.0.0.55->DropBox.com 4.1GB Upload
+02:45 WinEvent 1102: 보안 로그 삭제
+02:47 EDR: vssadmin delete shadows /ALL
+02:51 File: 엔지니어링 파일 .enc 확장자 변경
+'

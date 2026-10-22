@@ -1,0 +1,6 @@
+메일 GW      Initial Access   T1566.001   xlsm 첨부,DKIM FAIL,VT 5/94    High
+EDR         Execution      T1059.001+T1027  Excel->wscript->PS -enc체인 High
+DNS         C&C             T1071.001+T1568   3일 된 도메인 VT 15/94 ->C2   High
+Firewall    C&C2         T1071.001 Beaconing    4h12m지속, 소량 TX/대량 RX  High
+파일감사     Collection     T1039+T1560         HR폴더 2140개 복사-> Public/tmp수지 High
+Proxy       Exfiltration    T1567.002           8.4GB archive.zip ->Googledrive     HIgh

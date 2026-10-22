@@ -1,0 +1,5 @@
+# 로그 c
+09:15~09:47 Proxy Log
+GET https://xn--80aaaf4bwd.xyz/gate.php
+Interval: 120s (+-3s)   | Body: 298B 일정
+Domain Age: 8일 | VT: 12/94 malicious

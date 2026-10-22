@@ -1,0 +1,13 @@
+Day1 09:14  메일GW  Initial Access  T1566.001   xlsm+VT 3/94의심
+Day1 09:31  EDR     Execution       T1059.001+T1027 WINWORD->PS -enc 체인
+Day1 03:32  DNS     C&c             T1568+T1071.001    5일 된 신규 도메인
+Day2 03:22 WinEvent Credential Access   T1110.001       DC대상 8회 실패
+Day2 03:28  WinEvent    Initial Access  T1078.002       admin 계정 네트워크 로그인
+Day2 03:31  Sysmon      Discoery        T1069.002       Domain Admins 그룹 열거
+Day2 03:35  Sysmon      Credential Access   T1003.001   Isass.exe 메모리 접근
+Day2 03:44  WinEvent    Persistence         T1053.005    %ProgramData% 위치 예약작업
+Day3 02:01  File        Collection          T1039       Engineering 폴더 2,847개
+Day3 02:33  FW          Exfiltration        T1567.002   Dropbox 4.1GB 업로드
+Day3 02:45  WinEvent    Defense Evasion     T1070.001   보안 로그 삭제
+Day3 02:47  EDR         Impact              T1490       vssadmin shadows 삭제
+Day3 02:51  File        Impact              T1486       .enc 확장자 변경 = 랜섬웨어

