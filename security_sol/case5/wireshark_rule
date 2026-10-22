@@ -1,0 +1,12 @@
+# C2 HTTP Beaconing 탐지
+http.request && ip.dst != 내부IP && !알려진IP
+# DNS Tunneling 의심 (긴 서브도메인)
+dns && dns.qry.name matches ".{40,}"
+# TLS 자체 서명 인증서 탐지
+tls.handshake.type == 11 &&
+!tls.handshake.cert.issuer contains "DigiCert"
+#ICMP 데이터 포함 {ICMP 터널링}
+icmp && data.len >64
+#비정상 포트 사용
+!tcp.port in {80 443 53 22 25 110}
+&& ip.dst != 내부 ip

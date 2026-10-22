@@ -1,0 +1,10 @@
+T1069.002 Domain GRups  localgroup +/domain = 도메인 그룹 열거
+T1547.001 Registry Run KEy  HKCU\Run + REG_SZ+Temp 경로 = Persistence
+T1218+T1105LOLBin+Tool Transfer     certutil -urlcache= LOLBin 파일 다운로드
+T1070.001 Clear Windows Event logonpasswords    wevtutil cl Security = 보안 로그 삭제
+T1003.001 LSASS Memory                          mimikatz sekurlsa = lsass 자격증명 추출
+T1572 protocol tunneling                    SSH -L = SSH 포트 포워딩 = 터널링
+T1039 Network Shared drive                  xcopy \\filesvr=네트워크 공유 드라이브 복사
+T1490 Inhibit System Recovery               wmic shadowcopy delete = VSS 삭제
+T1190 Exploit Public-Facing App             SQLi 패턴(OR 1=1)+200응답 = 성공적 익스플로잇
+T1567.002 Exfil to Cloud Storage            Put drive.google.com 3.8GB=클라우드 스토리지 유출
