@@ -1,0 +1,26 @@
+# 변환 대상 Sigma Rule
+
+title: Suspicious PowerShell Encoded Command
+logsource:
+category: process_creation
+produce: windows
+detection:
+selection:
+Image|endswitch: '\powershell.exe'
+CommandLine|contains|all:
+- '-enc'
+- '-w '
+condition: selection
+falsepostivies:
+- signed Powershell scripts
+level: high
+# 변환 결과 - Splunk SPL
+# sigma convert -t splunk rule.yml
+source=WinEventLog:Securirty
+EventCode=4688
+NewProcessName="*\\powershell.exe"
+CommandLine="*-enc *" CommandLine="*-w *"
+# 변환 결과 - Elastic KQL
+# sigma convert -t elasticsearch rule.yml
+process.name: "powershell.exe" AND
+process.args: ("-enc* AND *-w*)

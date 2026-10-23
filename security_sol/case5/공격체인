@@ -1,0 +1,9 @@
+이벤트               판단            ATT&CK                         근거
+[A]VPN로그인         정상               -               국내 IP,등록 디바이스,업무시간
+[B]Word->PS         정상               -               서명된 스크립트,IT팀 계정,알려진 파일
+[C] 이상 DNS         의심          T1568+T1071       2일 된 도메인,VT 18/94 악성, 10.0.0.88발생
+[D] C2 Beaconing    의심           T1071.001           90초 정확 주기,크기 일정
+[E] svc_backup 파일  의심             T1078             정기 백업 시간(03:00)이 아닌 10:02 접근
+[F] 급여 파일 접근    의심             T1039           svc_backup이 Payroll 파일 비정상 접근
+[G] 1.8GB 업로드     의심            T1567.002      OneDrive에 1.8GB arch.zip 14:55업무 후반
+[H] DC 접근 시도     의심              T1021+T1078  svc_backup이 DC에 처음 접근 = Lateral Movement

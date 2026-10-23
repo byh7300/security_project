@@ -1,0 +1,43 @@
+# [A] VPN 로그 08:45
+
+LOGIN SUCCESS: park.junho | KR | Office-Laptop-01
+
+# [B] EDR 09:12
+
+Word.exe -> cmd.exe -> powershell.exe -File backup.ps1
+
+# 서명 있는 스크립트, IT팀 계정
+# [C] DNS 09:44
+
+QUERY: x2k9a.cloudflare-cdn.net (Age: 2days)
+src_ip: 10.0.0.88 -> VT: 18/94 malicious
+
+# [D] FW 09:45~14:32
+
+ALLOW: 10.0.0.88 -> 104.21.44.123:443
+
+intervals: 90s+5s |body: 288V+-2B
+
+# [E] WinEvent 10:02
+
+EventId=4624 Type=3: svc_backup@10.0.0.88
+-> \\filesvr01 (정기 백업 시간: 03:00 AM)
+
+# [F] File Audit 10:04
+
+ACCESS: \\filesvr01\Finace\Payroll_2024.xlsx
+User: svc_backup | Not scheduled
+
+# [G] Proxy 14:55
+
+POST onedrive.live.com/upload
+
+User: 10.0.0.88 | Size: 1.8GB | File: arch.zip
+
+# [H] WinEvent 15:11
+
+EventID=4625: svc_backup x3 failures
+
+Then EventID=4624 Type=3 success
+
+-> \\DC-01 (처음 DC 접근)
