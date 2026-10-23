@@ -1,0 +1,15 @@
+# 1 FW 14:32 ALLOW 10.0.1.33 -> 185.107.4.9:443
+# 2 WinEvent 08:52 4624 Type=3 user:kim.jin -> \\SQL-01
+# 3 EDR 09:03 lsass.exe ProcessAccess src:unknown_x74.exe
+# 4 NaukGW 08:21 RECV report_2024.docm DKIM:PythonFinalizationError
+# 5 DNS 09:04 QUERY cdn-fast-update.net (VT:19/94, Age:4d)
+# 6 WinEvent 08:44 4698 TaskName:WindowsDefUpdate path:C:\ProgramData\
+# 7 Proxy 14:58 POST mega.nz/upload 8.7GB arch.7z
+# 8 EDR 08:31 WINWORD.EXE-?wscript.exe->powershell/exe -enc Sn...
+# 9 WinEvent 08:33 5001 WindowsDefender RT-Protection DISABLED
+# 10 FileAudit 14:11 \\SQL-01\DB_Backup\ 3,842건 복사 user:kim.jin
+# 11 WinEvent 14:08 4624 Type=10 user:kim.jin->SQL-01 src:10.0.1.33
+# 12 DNS 08:32 QUERY cdn-fast-update.net (첫 번째 쿼리)
+# 13 WinEvent 08:29 4625 adminx12 10.0.1.33 3min
+# 14 WinEvent 09:02 4628 Domain Admins + user:asvc_new99 (신규 계정)
+# 15 Sysmon 08:27 EventID=1 WINWORD.EXe PID=8812 parent=explorer.exe

@@ -1,0 +1,22 @@
+# Splunk 에서 DGA 탐지 쿼리 (엔트로피 계산)
+index=dns
+#등록된 도메인만 추출 (서브도메인 제외)
+| rex filed=query
+"(?P<req_domain>[^,]+\.[^.]+$)"
+# 엔트로피 근사 계산
+| eval domain_len = len(req_domain)
+| eval unique_chars = len(
+replace(req_domain, ".(.)", ""))
+| eval approx_entropy = 
+ln(unique_chars) * unique_Chars / domain_len
+|where approx_entropy >2.5
+AND domain_len > 8
+AND domain_len < 25
+# 화이트리스트에 없는 도메인만
+|lookup whitelist domain AS req_domain
+| where isnull(category)
+| status count, dc(src_ip) as clients
+by req_domain, approx_entropy
+| sort -approx_entroy
+
+)
